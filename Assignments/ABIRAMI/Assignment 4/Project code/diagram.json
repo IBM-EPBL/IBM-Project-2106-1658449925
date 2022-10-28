@@ -1,0 +1,40 @@
+{
+  "version": 1,
+  "author": "ABIRAMI B GCTC1918101",
+  "editor": "wokwi",
+  "parts": [
+    { "type": "wokwi-esp32-devkit-v1", "id": "esp", "top": 41.94, "left": -151.71, "attrs": {} },
+    {
+      "type": "wokwi-hc-sr04",
+      "id": "ultrasonic1",
+      "top": -113.83,
+      "left": -37.38,
+      "attrs": { "distance": "217" }
+    },
+    {
+      "type": "wokwi-led",
+      "id": "led1",
+      "top": 64.64,
+      "left": 85.74,
+      "attrs": { "color": "red" }
+    },
+    {
+      "type": "wokwi-resistor",
+      "id": "r1",
+      "top": 119.16,
+      "left": 123.46,
+      "attrs": { "value": "1000" }
+    }
+  ],
+  "connections": [
+    [ "esp:TX0", "$serialMonitor:RX", "", [] ],
+    [ "esp:RX0", "$serialMonitor:TX", "", [] ],
+    [ "ultrasonic1:VCC", "esp:VIN", "red", [ "v14.72", "h-238.87", "v203.46" ] ],
+    [ "ultrasonic1:GND", "esp:GND.2", "black", [ "v31.67", "h-251.83", "v180.26" ] ],
+    [ "ultrasonic1:TRIG", "esp:D5", "green", [ "v0" ] ],
+    [ "ultrasonic1:ECHO", "esp:D18", "green", [ "v0" ] ],
+    [ "esp:GND.1", "led1:C", "black", [ "h0" ] ],
+    [ "led1:A", "r1:1", "green", [ "v0" ] ],
+    [ "esp:D4", "r1:2", "green", [ "h0" ] ]
+  ]
+}
