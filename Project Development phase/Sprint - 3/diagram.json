@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "author": "PNT2022TMID41292",
+  "author": "PNT2022TMID06972",
   "editor": "wokwi",
   "parts": [
     { "type": "wokwi-esp32-devkit-v1", "id": "esp", "top": 4.8, "left": -127.69, "attrs": {} },
